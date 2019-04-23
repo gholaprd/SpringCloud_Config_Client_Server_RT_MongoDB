@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: XYZ-SERVICE
+    
+    
+
+# -- Configure for Ribbon:
+  
+ping-server:
+  ribbon:
+    eureka:
+      enabled: false # Disable Default Ping
+    listOfServers: localhost:8000,localhost:8001,localhost:8002,,localhost:8003
+    ServerListRefreshInterval: 15000
+     
+# -- Configure Discovery Client (Eureka Client).    
+# Configure this application to known "Service Registration".
+ 
+eureka:
+  instance:
+    appname: XYZ-SERVICE  # ==> This is an instance of XYZ-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+#      defaultZone: http://my-eureka-server.com:9000/eureka
+      defaultZone: http://cebs-it-135.cebs-corporate.com:8761/eureka
+#      defaultZone: http://my-eureka-server-fr.com:9002/eureka
+#      defaultZone: http://my-eureka-server-vn.com:9003/eureka   
