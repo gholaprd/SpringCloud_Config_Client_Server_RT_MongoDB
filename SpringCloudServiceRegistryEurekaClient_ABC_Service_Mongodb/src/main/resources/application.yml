@@ -1,0 +1,84 @@
+spring:
+  application:
+    name: ABC-SERVICE-MONGODB # ==> This is Service-Id
+     
+ 
+---
+# Items that apply to ALL profiles:   
+eureka:
+  instance:
+    appname: ABC-SERVICE-MONGODB  # ==> This is a instance of ABC-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+#      defaultZone: http://my-eureka-server.com:9000/eureka
+      defaultZone: http://cebs-it-135.cebs-corporate.com:8761/eureka
+#      defaultZone: http://my-eureka-server-fr.com:9002/eureka
+#      defaultZone: http://my-eureka-server-vn.com:9003/eureka
+server:
+  port: 8585  
+  
+---
+spring:
+  profiles: abc-service-replica01
+eureka:
+  instance:
+    appname: ABC-SERVICE-MONGODB  # ==> This is a instance of ABC-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://cebs-it-135.cebs-corporate.com:8761/eureka 
+server:
+  port: 8586   
+     
+---
+spring:
+  profiles: abc-service-replica02
+eureka:
+  instance:
+    appname: ABC-SERVICE-MONGODB  # ==> This is a instance of ABC-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://cebs-it-135.cebs-corporate.com:8761/eureka    
+server:
+  port: 8587
+  
+---
+spring:
+  profiles: abc-service-replica03
+eureka:
+  instance:
+    appname: ABC-SERVICE-MONGODB  # ==> This is a instance of ABC-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://cebs-it-135.cebs-corporate.com:8761/eureka  
+server:
+  port: 8588
+  
+---
+spring:
+  profiles: abc-service-replica04
+eureka:
+  instance:
+    appname: ABC-SERVICE-MONGODB  # ==> This is a instance of ABC-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://cebs-it-135.cebs-corporate.com:8761/eureka    
+server:
+  port: 8589  
+  
+---
+spring:
+  profiles: abc-service-replica05
+eureka:
+  instance:
+    appname: ABC-SERVICE-MONGODB  # ==> This is a instance of ABC-SERVICE
+  client:   
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://cebs-it-135.cebs-corporate.com:8761/eureka    
+server:
+  port: 8590
