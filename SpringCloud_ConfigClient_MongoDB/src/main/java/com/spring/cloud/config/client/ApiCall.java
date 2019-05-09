@@ -39,7 +39,7 @@ public class ApiCall {
 	 * @return list of products
 	 */
 
-	@GetMapping(value = "getAll")
+	@GetMapping(value = "getAllProducts")
 	public ResponseEntity<?> getAllProducts() {
 
 		List<Products> list = (List<Products>) productRepo.findAll();
